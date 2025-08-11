@@ -1,3 +1,5 @@
+const { indexOf } = require("lodash");
+
 class ProductProperties{
     constructor(name,price,quantity){
     this.name = name;
@@ -40,6 +42,22 @@ class ProductProperties{
                 total = total + element.price;
             })
             return total;
+        }
+        findProduct(name){
+           // this.inventory.find(name);
+           var i;
+           this.inventory.forEach(el =>{
+            
+            if(el.name === name){
+                i = indexOf(el);
+            }if(i==undefined){
+                i=null;
+            }
+
+           });
+           if (i!=null){
+            return this.inventory[i];
+           }else return i;
         }
     }
 
