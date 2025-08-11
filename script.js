@@ -76,3 +76,6 @@ class ProductProperties{
     let Soup = new ProductProperties('Soup',1.00,60);
     let Pop = new ProductProperties('Coke',1.79,200);
     let Candy = new ProductProperties('Reese\'s',1.50,200);
+
+    let store = new StoreInventory([Soup,Pop,Candy]);
+    
