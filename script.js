@@ -37,9 +37,9 @@ class ProductProperties{
             this.inventory.push(product);
         }
         getInventoryValue(){
-            var total;
+            var total=0;
             this.inventory.forEach(element =>{
-                total = total + element.price;
+                total = (total + element.price);
             })
             return total;
         }
@@ -81,3 +81,6 @@ class ProductProperties{
     store.addProduct(Apples);
     store.addProduct(Oranges);
     console.log(store);
+    console.log(store.getInventoryValue());
+    
+    
