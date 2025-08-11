@@ -27,6 +27,16 @@ class ProductProperties{
         }
     }
 
+    class StoreInventory{
+        constructor(array){
+            this.inventory = array;
+        }
+        addProduct(product){
+            this.inventory.push(product);
+        }
+        
+    }
+
     let Apples = new Perishables('Apple',0.89,300,'Tuesday August 18th 2025');
     console.log(Apples.toString());
     console.log(Apples.getTotalValue());
