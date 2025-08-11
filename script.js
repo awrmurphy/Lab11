@@ -78,4 +78,5 @@ class ProductProperties{
     let Candy = new ProductProperties('Reese\'s',1.50,200);
 
     let store = new StoreInventory([Soup,Pop,Candy]);
-    
+    store.addProduct(Apples);
+    store.addProduct(Oranges);
