@@ -24,5 +24,8 @@ class ProductProperties{
 
     let Apples = new Perishables('Apple',0.89,300,'Tuesday August 18th 2025');
     Apples.toString();
+    Apples.getTotalValue();
 
-    let Oranges = new Perishables('Orange')
+    let Oranges = new Perishables('Orange', 0.79,300,'Tuesday August 18th 2025');
+    Oranges.toString();
+    Oranges.getTotalValue();
