@@ -10,9 +10,9 @@ class ProductProperties{
     toString(){
         return (`Product: ${this.name}, Price: ${this.price}, Qunatity: ${this.quantity}`);
     
-
+    }
+}
     class Perishables extends ProductProperties{
 
     }
-}
-}
+
