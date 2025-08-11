@@ -72,3 +72,7 @@ class ProductProperties{
     ProductProperties.applyDiscount([Apples,Oranges],0.1);
     console.log(Apples.toString());
     console.log(Oranges.toString());
+
+    let Soup = new ProductProperties('Soup',1.00,60);
+    let Pop = new ProductProperties('Coke',1.79,200);
+    let Candy = new ProductProperties('Reese\'s',1.50,200);
