@@ -62,16 +62,16 @@ class ProductProperties{
     }
 
     let Apples = new Perishables('Apple',0.89,300,'Tuesday August 18th 2025');
-    console.log(Apples.toString());
-    console.log(Apples.getTotalValue());
+    // console.log(Apples.toString());
+    // console.log(Apples.getTotalValue());
 
     let Oranges = new Perishables('Orange', 0.79,300,'Tuesday August 18th 2025');
-    console.log(Oranges.toString());
-    console.log(Oranges.getTotalValue());
+    // console.log(Oranges.toString());
+    // console.log(Oranges.getTotalValue());
 
-    ProductProperties.applyDiscount([Apples,Oranges],0.1);
-    console.log(Apples.toString());
-    console.log(Oranges.toString());
+    // ProductProperties.applyDiscount([Apples,Oranges],0.1);
+    // console.log(Apples.toString());
+    // console.log(Oranges.toString());
 
     let Soup = new ProductProperties('Soup',1.00,60);
     let Pop = new ProductProperties('Coke',1.79,200);
