@@ -34,7 +34,13 @@ class ProductProperties{
         addProduct(product){
             this.inventory.push(product);
         }
-        
+        getInventoryValue(){
+            var total;
+            this.inventory.forEach(element =>{
+                total = total + element.price;
+            })
+            return total;
+        }
     }
 
     let Apples = new Perishables('Apple',0.89,300,'Tuesday August 18th 2025');
