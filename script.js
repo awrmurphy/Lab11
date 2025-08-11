@@ -8,7 +8,7 @@ class ProductProperties{
         return (this.price*this.quantity);
     }
     toString(){
-        return (`Product: ${this.name}, Price: ${this.price}, Qunatity: ${this.quantity}`);
+        return (`Product: ${this.name}, Price: ${this.price}, Qunatity: ${this.quantity}.`);
     
     }
 }
@@ -16,6 +16,9 @@ class ProductProperties{
         constructor(name,price,quantity,expiryDate){
         super(name,price,quantity);
         this.expiryDate = expiryDate;
+        }
+        toString(){
+            return (`Product: ${this.name}, Price: ${this.price}, Qunatity: ${this.quantity}, Expiration Date: ${this.expiryDate}.`);
         }
     }
 
