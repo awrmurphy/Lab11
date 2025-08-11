@@ -80,3 +80,4 @@ class ProductProperties{
     let store = new StoreInventory([Soup,Pop,Candy]);
     store.addProduct(Apples);
     store.addProduct(Oranges);
+    console.log(store);
