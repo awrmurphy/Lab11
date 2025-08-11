@@ -5,7 +5,7 @@ class ProductProperties{
     this.quantity = quantity;
     }
     getTotalValue(){
-        return (this.price*this.quantity);
+        return (`The total value of all ${this.name}'s is: \$`+this.price*this.quantity);
     }
     toString(){
         return (`Product: ${this.name}, Price: ${this.price}, Qunatity: ${this.quantity}.`);
@@ -18,7 +18,11 @@ class ProductProperties{
         this.expiryDate = expiryDate;
         }
         toString(){
-            return (`Product: ${this.name}, Price: ${this.price}, Qunatity: ${this.quantity}, Expiration Date: ${this.expiryDate}.`);
+            return (`Product: ${this.name}, Price: \$${this.price}, Qunatity: ${this.quantity}, Expiration Date: ${this.expiryDate}.`);
         }
     }
 
+    let Apples = new Perishables('Apple',0.89,300,'Tuesday August 18th 2025');
+    Apples.toString();
+
+    let Oranges = new Perishables('Orange')
