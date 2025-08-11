@@ -8,8 +8,13 @@ class ProductProperties{
         return (`The total value of all ${this.name}'s is: \$`+this.price*this.quantity);
     }
     toString(){
-        return (`Product: ${this.name}, Price: ${this.price}, Qunatity: ${this.quantity}.`);
+        return (`Product: ${this.name}, Price: ${this.price.toFixed(2)}, Qunatity: ${this.quantity}.`);
     
+    }
+    static applyDiscount(products,discount){
+        products.forEach(element => {
+            element.price = element.price - (element.price*discount);
+        });
     }
 }
     class Perishables extends ProductProperties{
@@ -18,14 +23,18 @@ class ProductProperties{
         this.expiryDate = expiryDate;
         }
         toString(){
-            return (`Product: ${this.name}, Price: \$${this.price}, Qunatity: ${this.quantity}, Expiration Date: ${this.expiryDate}.`);
+            return (`Product: ${this.name}, Price: \$${this.price.toFixed(2)}, Qunatity: ${this.quantity}, Expiration Date: ${this.expiryDate}.`);
         }
     }
 
     let Apples = new Perishables('Apple',0.89,300,'Tuesday August 18th 2025');
-    Apples.toString();
-    Apples.getTotalValue();
+    console.log(Apples.toString());
+    console.log(Apples.getTotalValue());
 
     let Oranges = new Perishables('Orange', 0.79,300,'Tuesday August 18th 2025');
-    Oranges.toString();
-    Oranges.getTotalValue();
+    console.log(Oranges.toString());
+    console.log(Oranges.getTotalValue());
+
+    ProductProperties.applyDiscount([Apples,Oranges],0.1);
+    console.log(Apples.toString());
+    console.log(Oranges.toString());
