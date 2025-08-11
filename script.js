@@ -39,7 +39,7 @@ class ProductProperties{
         getInventoryValue(){
             var total=0;
             this.inventory.forEach(element =>{
-                total = (total + element.price);
+                total = (total + (element.price*element.quantity));
             })
             return total;
         }
@@ -49,15 +49,18 @@ class ProductProperties{
            this.inventory.forEach(el =>{
             
             if(el.name === name){
-                i = indexOf(el);
-            }if(i==undefined){
-                i=null;
+                i = this.inventory.indexOf(el);
             }
-
            });
-           if (i!=null){
+
+           if (i!=-1){
             return this.inventory[i];
-           }else return i;
+           }
+           else
+            {
+            i=null;
+            return i;
+           }
         }
     }
 
@@ -81,6 +84,9 @@ class ProductProperties{
     store.addProduct(Apples);
     store.addProduct(Oranges);
     console.log(store);
-    console.log(store.getInventoryValue());
+    console.log("Before Discount: \n"+store.getInventoryValue().toFixed(2));
+    ProductProperties.applyDiscount(store.inventory,0.15);
+    console.log("After Discount: \n"+store.getInventoryValue().toFixed(2));
+    console.log(store.findProduct('Apple'));
     
     
